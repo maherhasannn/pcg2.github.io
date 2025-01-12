@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Piedmont &mdash; Piedmont Consulting Club</title>
+    <title>Piedmont &mdash; Tomorrow's Leaders Transforming Today</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -47,7 +47,7 @@
 
             <div class="col-3">
               <div class="site-logo">
-                <a href="index.html" class="font-weight-bold">Consulting</a>
+                <a href="index.html" class="font-weight-bold">Piedmont </a>
               </div>
             </div>
 
@@ -76,15 +76,84 @@
       </header>
 
     
-    <div class="site-section-cover">
-      <div class="container">
-        <div class="row align-items-center text-left justify-content-center">
-          <div class="col-lg-10 ml-auto">
-            <h1 class="text-black mb-4">We are consulting agency based in New York City</h1>
+      <div class="site-section-cover">
+        <div class="container">
+          <div class="row align-items-center text-left justify-content-center">
+            <div class="col-lg-10 ml-auto">
+              <h1 class="text-black mb-4">
+                Piedmont is UC Berkeley's 
+                <span id="dynamic-text" style="display: inline-block; min-width: 380px; min-height: 1.2em;">
+                  Premier Philanthropic Consultancy.<span id="cursor">|</span>
+                </span>
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      
+      <style>
+        #cursor {
+          display: inline-block;
+          font-weight: bold;
+          animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+          0% { opacity: 1; }
+          50% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+      </style>
+      
+      <script>
+        const phrases = [
+          "Premier Philanthropic Consultancy.",
+          "Top Venture-Backed Startup Consultancy.",
+          "Largest Charity Organization."
+        ];
+      
+        const textElement = document.getElementById("dynamic-text");
+        const cursorElement = document.getElementById("cursor");
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 35;   // Speed of typing
+        const deletingSpeed = 15;  // Speed of deleting
+        const pauseTime = 4000;    // Pause before deleting
+      
+        function type() {
+          const currentPhrase = phrases[phraseIndex];
+          
+          if (isDeleting) {
+            textElement.textContent = currentPhrase.substring(0, charIndex);
+            charIndex--;
+          } else {
+            textElement.textContent = currentPhrase.substring(0, charIndex);
+            charIndex++;
+          }
+      
+          textElement.appendChild(cursorElement);
+      
+          if (!isDeleting && charIndex > currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(type, pauseTime);
+          } else if (isDeleting && charIndex < 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(type, 500);
+          } else {
+            setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+          }
+        }
+      
+        document.addEventListener("DOMContentLoaded", type);
+      </script>
+
+
+      
+      
+
+
 
     <div class="site-section-cover full-screen" style="background-image: url('images/hero_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="container">
@@ -99,44 +168,51 @@
 
         <div class="row mb-5 align-items-start">
           <div class="col-md-4">
-            <h5 class="heading-caps text-muted">Services</h5>
+            <h5 class="heading-caps text-muted">So... what makes us different?</h5>
           </div>
           <div class="col-md-8">
-            <h2 class="font-weight-bold">We are consulting agency based in New York City</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex magnam earum a facilis eius omnis quia ullam animi vitae iste.</p>
+            <h2 class="font-weight-bold">Piedmont's mission is to strengthen the community. That's why we donate <i>51%</i> of our operating reserves every 6 months*.</h2>
+            <p>We invest back into the community, ensuring that our work makes a lasting impact.
+
+              With our elite team of hackers, designers, and visionaries, we take 6 projects a semester and don't stop until our clients are completely satisfied.
+              Our small, focused teams deliver exceptional results by dedicating time and attention to each project. Piedmont stands out by combining innovation, excellence, and a commitment to making a difference in every project we take on. </p>
+              <br>
+              <p>
+                Yes, really*.
+              </p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
             <div class="service-29191 d-flex">
               <span class="wrap-icon mb-4 d-block">
-                <span class="et-toolbox"></span>
+                <span class="et-heart"></span>
               </span>
               <div>
-                <h3 class="mb-3">Consultation</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                <h1 class="mb-3"><b>$30,000+</b></h1>
+                <p>donations to families in need.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="service-29191 d-flex">
               <span class="wrap-icon mb-4 d-block">
-                <span class="et-genius"></span>
+                <span class="et-heart"></span>
               </span>
               <div>
-                <h3 class="mb-3">Innovative Ideas</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                <h1 class="mb-3"><b>4</b></h1>
+                <p>charity events bi-anually.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="service-29191 d-flex">
               <span class="wrap-icon mb-4 d-block">
-                <span class="et-chat"></span>
+                <span class="et-heart"></span>
               </span>
               <div>
-                <h3 class="mb-3">24/7 Support</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores.</p>
+                <h1 class="mb-3"><b>8.7%</b></h1>
+                <p>acceptance rate.</p>
               </div>
             </div>
           </div>
@@ -215,30 +291,30 @@
       <div class="container">
         <div class="row mb-5 align-items-start">
           <div class="col-md-4">
-            <h5 class="heading-caps text-muted">Office Gallery</h5>
+            <h5 class="heading-caps text-muted">Seeing is Believing </h5>
           </div>
           <div class="col-md-8">
-            <h2 class="font-weight-bold">We are consulting agency based in New York City</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex magnam earum a facilis eius omnis quia ullam animi vitae iste.</p>
+            <h2 class="font-weight-bold">"Tomorrows' Leaders Transforming Today"</h2>
+            <p>That's our motto. At Piedmont, we strive to make a difference every day. Whether it’s donating Chromebooks to underprivileged children in Oakland, organizing entrepreneur conferences for leading organizations, or hosting charity band nights, we are committed to outdoing ourselves with each initiative.</p>
           </div>
         </div>
       </div>
       <div class="container-fluid px-0">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <a href="images/img_1.jpg" data-fancybox="gal" class="portfolio-item"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+            <a href="images/chainsmokers.gif" data-fancybox="gal" class="portfolio-item"><img src="images/chainsmokers.gif" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-4">
             <a href="images/img_2.jpg" data-fancybox="gal" class="portfolio-item"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-4">
-            <a href="images/img_3.jpg" data-fancybox="gal" class="portfolio-item"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+            <a href="images/img_3.gif" data-fancybox="gal" class="portfolio-item"><img src="images/img_3.gif" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-4">
             <a href="images/img_4.jpg" data-fancybox="gal" class="portfolio-item"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-4">
-            <a href="images/img_5.jpg" data-fancybox="gal" class="portfolio-item"><img src="images/img_5.jpg" alt="Image" class="img-fluid"></a>
+            <a href="images/img_5.gif" data-fancybox="gal" class="portfolio-item"><img src="images/img_5.gif" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-md-4">
             <a href="images/img_6.jpg" data-fancybox="gal" class="portfolio-item"><img src="images/img_6.jpg" alt="Image" class="img-fluid"></a>
@@ -251,12 +327,12 @@
     
     
     
-    <div class="footer site-section pb-0 bg-primary">
+    <!-- <div class="footer site-section pb-0 bg-primary" style="background-color: blue;">
       <div class="container">
         <div class="row">
           <div class="col-md-3">
             <div class="site-logo-footer">
-              <a href="index.html" class="text-white">Consulting</a>
+              <a href="index.html" class="text-white">Piedmont </a>
             </div> 
           </div>
           <div class="col-md-8 ml-auto">
@@ -292,22 +368,39 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="py-5 bg-primary">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <div class="py-5 bg-white">
       <div class="container">
-        
         <div class="row mt-5 justify-content-center">
           <div class="col-md-7 text-center">
-            <p class="text-white">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p class="text-dark">
+              &copy <script>document.write(new Date().getFullYear());</script> Piedmont Consulting Group, All Rights Reserved | We are a student group acting independently of the University of California. We take full responsibility for our organization and this website.
             </p>
+    
+            <!-- Social Media Links -->
+            <div class="d-flex justify-content-center mt-3">
+              <!-- LinkedIn Button -->
+              <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-dark mr-3">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              
+              <!-- Instagram Button -->
+              <a href="https://www.instagram.com" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
+    
+    
 
     
 

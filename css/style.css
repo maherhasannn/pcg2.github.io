@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5,
   background: #fff !important;
   font-family: "Poppins", sans-serif; }
   .form-control:active, .form-control:focus {
-    border-color: #1fab89; }
+    border-color: #ff5900; }
   .form-control:hover, .form-control:active, .form-control:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
@@ -975,14 +975,14 @@ h1, h2, h3, h4, h5,
   text-transform: uppercase;
   font-weight: bold; }
   .site-logo-footer a {
-    color: #1fab89; }
+    color: #1f50ab; }
 
 .heading-caps {
   font-size: 13px;
   letter-spacing: .2rem;
   text-transform: uppercase;
   font-weight: bold;
-  color: #1fab89 !important; }
+  color: #3d6ac4 !important; }
 
 .row.no-gutters {
   margin-right: 0;
