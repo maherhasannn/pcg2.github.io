@@ -4,7 +4,7 @@
 
 
   <head>
-    <title>Piedmont &mdash; Tomorrow's Leaders Transforming Today</title>
+    <title>Piedmont | Tomorrow's Leaders Transforming Today</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -68,7 +68,7 @@
                   <li><a href="about.html" class="nav-link">Team</a></li>
                   <li><a href="services.html" class="nav-link">Services</a></li>
                   <li><a href="youtube.com" class="nav-link">Apply</a></li>
-                  <li><a href="services.html" class="nav-link">FAQ</a></li>
+                  <li><a href="single.html" class="nav-link">FAQ</a></li>
                   <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
               </nav>
@@ -192,14 +192,15 @@
               
           </div>
         </div>
-        <div class="row">
+
+        <div class="row" id="counter-row">
           <div class="col-md-4">
             <div class="service-29191 d-flex">
               <span class="wrap-icon mb-4 d-block">
                 <span class="et-heart"></span>
               </span>
               <div>
-                <h1 class="mb-3"><b>$2,000+</b></h1>
+                <h1 class="mb-3"><b id="donation-count">$0</b></h1>
                 <p>in donations to support families in need.</p>
               </div>
             </div>
@@ -210,7 +211,7 @@
                 <span class="et-heart"></span>
               </span>
               <div>
-                <h1 class="mb-3"><b>6</b></h1>
+                <h1 class="mb-3"><b id="projects-count">0</b></h1>
                 <p>hyper-focused projects each semester.</p>
               </div>
             </div>
@@ -221,14 +222,66 @@
                 <span class="et-heart"></span>
               </span>
               <div>
-                <h1 class="mb-3"><b>8,496</b></h1>
+                <h1 class="mb-3"><b id="code-count">0</b></h1>
                 <p>lines of code (and a few bugs along the way).</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        
+        <script>
+          // Function to animate the numbers
+          function animateCount(targetId, targetValue, duration, symbol) {
+            const element = document.getElementById(targetId);
+            let startValue = 0;
+            let startTime = null;
+        
+            function countUp(timestamp) {
+              if (!startTime) startTime = timestamp;
+              const progress = timestamp - startTime;
+              const increment = Math.min(targetValue * (progress / duration), targetValue);
+        
+              // Add the $ symbol for donations and + sign for completion
+              if (symbol === '$') {
+                element.innerHTML = `$${Math.floor(increment).toLocaleString()}`;
+              } else {
+                element.innerHTML = Math.floor(increment).toLocaleString();
+              }
+        
+              if (progress < duration) {
+                requestAnimationFrame(countUp);
+              } else {
+                if (symbol === '$') {
+                  element.innerHTML = `$${targetValue.toLocaleString()}+`; // Add + when done
+                } else {
+                  element.innerHTML = targetValue.toLocaleString();
+                }
+              }
+            }
+        
+            requestAnimationFrame(countUp);
+          }
+        
+          // Function to handle scrolling event
+          function handleScroll() {
+            const row = document.getElementById("counter-row");
+            const rect = row.getBoundingClientRect();
+            const inView = rect.top <= window.innerHeight && rect.bottom >= 0;
+        
+            if (inView) {
+              // Start counting when the row is in the viewport
+              animateCount("donation-count", 2000, 2000, '$'); // $2,000+
+              animateCount("projects-count", 6, 2000, ''); // 6 projects
+              animateCount("code-count", 8496, 3000, ''); // 8,496 lines of code
+              window.removeEventListener('scroll', handleScroll); // Remove listener once done
+            }
+          }
+        
+          // Add scroll event listener to trigger the animation when the user scrolls into view
+          window.addEventListener('scroll', handleScroll);
+        </script>
+</div>        
+        
 
     
       <div class="site-section bg-dark">
@@ -260,7 +313,7 @@
               <div class="img mr-3"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></div>
               <div class="name">
                 <span class="d-block">by Jubilee Media</span>
-                <span></span>
+                <span>Director of Growth, Nectar</span>
               </div>
             </div>
           </div>
