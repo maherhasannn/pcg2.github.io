@@ -1010,6 +1010,44 @@ h1, h2, h3, h4, h5,
 .team-91913 img[src*="raghavansrinivas.jpg"] {
   object-position: center 10%; }
 
+/* Former Members Carousel Styling */
+#formerMembersCarousel {
+  position: relative;
+  margin: 50px 0;
+}
+
+#formerMembersCarousel .carousel-control-prev,
+#formerMembersCarousel .carousel-control-next {
+  width: 5%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#formerMembersCarousel .carousel-control-prev {
+  left: 10%;
+}
+
+#formerMembersCarousel .carousel-control-next {
+  right: 10%;
+}
+
+#formerMembersCarousel .carousel-control-prev-icon,
+#formerMembersCarousel .carousel-control-next-icon {
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+#formerMembersCarousel .carousel-control-prev:hover,
+#formerMembersCarousel .carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 
 .team-91913 h3 {
   font-size: 18px;
