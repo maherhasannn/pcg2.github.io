@@ -993,7 +993,23 @@ h1, h2, h3, h4, h5,
     padding-left: 0; }
 
 .team-91913 img {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover; }
+
+.team-91913 img[src*="ysa.jpg"] {
+  object-position: center 20%; }
+
+.team-91913 img[src*="aryaraghavan.jpg"] {
+  object-position: center 15%; }
+
+.team-91913 img[src*="brookebullock.png"] {
+  object-position: center 20%; }
+
+.team-91913 img[src*="raghavansrinivas.jpg"] {
+  object-position: center 10%; }
+
 
 .team-91913 h3 {
   font-size: 18px;
