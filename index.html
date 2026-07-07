@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Piedmont Consulting Group is UC Berkeley's student-run philanthropic consultancy, helping ambitious organizations grow while investing in our community.">
+  <meta name="description" content="Piedmont Consulting Group is UC Berkeley's premier student-run startup consultancy, helping ambitious organizations grow while investing in our community.">
   <title>Piedmont Consulting Group | UC Berkeley</title>
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
@@ -34,7 +34,7 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <p class="eyebrow">UC Berkeley's philanthropic consultancy</p>
+        <p class="eyebrow">UC Berkeley's Premier Startup Consultancy</p>
         <h1 id="hero-title">Bold thinkers.<br><span id="dynamic-text">Lasting impact.</span><span class="cursor" aria-hidden="true"></span></h1>
         <p class="hero-copy">We bring curious, multidisciplinary students together to solve meaningful problems for startups, established companies, and our community.</p>
         <div class="hero-actions">
@@ -46,11 +46,11 @@
     </section>
 
     <section class="section difference" id="difference" aria-labelledby="difference-title">
-      <div class="section-heading">
+      <!-- Replace this placeholder with the final image when the asset is ready. -->
+      <div class="difference-visual" role="img" aria-label="Reserved space for a Piedmont Consulting Group photograph"></div>
+      <div class="difference-copy">
         <p class="eyebrow dark">What makes us different</p>
         <h2 id="difference-title">Strategy with a stake in the outcome.</h2>
-      </div>
-      <div class="difference-copy">
         <p class="lead">Piedmont creates lasting, positive impact through meaningful engagement with our clients, members, and the Bay Area community.</p>
         <p>Our teams unite perspectives from STEM, business, economics, and the humanities. By taking on only six focused projects each semester, we give every partner the attention and rigor their challenge deserves. The value we create extends beyond client work: we reinvest our time, resources, and capital in local social-impact initiatives.</p>
       </div>
@@ -80,9 +80,19 @@
         <p>If your organization has an ambitious problem to solve, we would like to hear where you want to go next.</p>
         <a class="button button-dark" href="contact.html">Work with us <span aria-hidden="true">&rarr;</span></a>
       </div>
-      <div class="impact-images" aria-label="Piedmont members at work">
-        <img class="impact-main" src="images/hero_2.jpg" alt="Piedmont members together on the UC Berkeley campus">
-        <img class="impact-secondary" src="images/img_2.jpg" alt="Piedmont community event">
+      <div class="impact-gallery" aria-label="Piedmont members at work" aria-roledescription="carousel">
+        <div class="impact-slides" aria-live="polite">
+          <figure class="impact-slide active" aria-hidden="false"><img src="images/hero_2.jpg" alt="Piedmont members together on the UC Berkeley campus"><figcaption><span>01</span> Our community</figcaption></figure>
+          <figure class="impact-slide" aria-hidden="true"><img src="images/img_2.jpg" alt="Piedmont members at a community event"><figcaption><span>02</span> Beyond client work</figcaption></figure>
+          <figure class="impact-slide" aria-hidden="true"><img src="images/hero_3.jpg" alt="Piedmont members collaborating together"><figcaption><span>03</span> Built at Berkeley</figcaption></figure>
+        </div>
+        <div class="gallery-controls">
+          <p><span id="gallery-current">01</span> / 03</p>
+          <div>
+            <button class="gallery-button gallery-previous" type="button" aria-label="Previous photograph">&larr;</button>
+            <button class="gallery-button gallery-next" type="button" aria-label="Next photograph">&rarr;</button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -94,19 +104,21 @@
           <img src="images/favicon.png" alt="" width="44" height="44">
           <span>Piedmont <small>Consulting Group</small></span>
         </a>
+        <h2>About</h2>
         <p>UC Berkeley students delivering thoughtful strategy, technical execution, and measurable social impact.</p>
       </div>
       <div>
-        <h2>Navigate</h2>
+        <h2>Contact us</h2>
+        <a href="contact.html">General inquiries</a>
+        <a href="contact.html">Work with us</a>
+        <a href="https://form.jotform.com/260145022640140" target="_blank" rel="noopener">Join PCG</a>
+      </div>
+      <div>
+        <h2>Navigation</h2>
+        <a href="index.html">Home</a>
         <a href="about.html">Our team</a>
         <a href="services.html">Services</a>
         <a href="single.html">Recruitment FAQ</a>
-      </div>
-      <div>
-        <h2>Get involved</h2>
-        <a href="https://form.jotform.com/260145022640140" target="_blank" rel="noopener">Join PCG</a>
-        <a href="https://airtable.com/app7ZWmcH1OeZ2zXM/shrPgRnyU5kvG44mR/tbljD5x04uypbZIxY" target="_blank" rel="noopener">Coffee chats</a>
-        <a href="contact.html">Work with us</a>
       </div>
       <div>
         <h2>Find us</h2>
@@ -170,6 +182,35 @@
       };
       setTimeout(type, 1800);
     }
+
+    const gallery = document.querySelector('.impact-gallery');
+    const slides = [...gallery.querySelectorAll('.impact-slide')];
+    const galleryCurrent = document.getElementById('gallery-current');
+    let activeSlide = 0;
+    let galleryTimer;
+    const showSlide = index => {
+      activeSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === activeSlide;
+        slide.classList.toggle('active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+      });
+      galleryCurrent.textContent = String(activeSlide + 1).padStart(2, '0');
+    };
+    const stopGallery = () => window.clearInterval(galleryTimer);
+    const startGallery = () => {
+      stopGallery();
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        galleryTimer = window.setInterval(() => showSlide(activeSlide + 1), 4800);
+      }
+    };
+    gallery.querySelector('.gallery-previous').addEventListener('click', () => { showSlide(activeSlide - 1); startGallery(); });
+    gallery.querySelector('.gallery-next').addEventListener('click', () => { showSlide(activeSlide + 1); startGallery(); });
+    gallery.addEventListener('mouseenter', stopGallery);
+    gallery.addEventListener('mouseleave', startGallery);
+    gallery.addEventListener('focusin', stopGallery);
+    gallery.addEventListener('focusout', startGallery);
+    startGallery();
   </script>
 </body>
 </html>
