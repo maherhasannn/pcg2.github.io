@@ -24,14 +24,12 @@
 .placements-heading .eyebrow { flex: 0 0 auto; margin-bottom: 9px; }
 .placements-heading h2 { max-width: 750px; color: white; text-align: right; }
 .logo-wall { display: grid; grid-template-columns: repeat(7, 1fr); border-top: 1px solid rgba(255,255,255,.14); border-left: 1px solid rgba(255,255,255,.14); }
-.placement-logo { display: grid; aspect-ratio: 1.2 / 1; min-height: 112px; place-content: center; place-items: center; gap: 8px; padding: 12px 8px; border: 0; border-right: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); color: white; background: rgba(255,255,255,.025); cursor: pointer; opacity: 1; transition: background .25s ease, opacity .25s ease, transform .25s ease, box-shadow .25s ease; }
+.placement-logo { display: grid; aspect-ratio: 1.2 / 1; min-height: 112px; place-content: center; place-items: center; gap: 8px; padding: 12px 8px; border: 0; border-right: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); color: white; background: rgba(255,255,255,.025); cursor: default; opacity: 1; transition: background .25s ease, transform .25s ease, box-shadow .25s ease; }
 .placement-logo img { width: 48px; height: 48px; object-fit: contain; opacity: 1; transition: transform .25s ease; }
 .placement-logo span { max-width: 120px; overflow: hidden; font-size: 10px; font-weight: 700; letter-spacing: .04em; line-height: 1.2; opacity: 0; transform: translateY(4px); transition: opacity .2s ease, transform .2s ease; }
-.logo-wall.has-selection .placement-logo:not(.selected) { opacity: .42; transform: scale(.94); }
-.placement-logo.selected { position: relative; z-index: 2; background: white; box-shadow: 0 12px 28px rgba(0,0,0,.28); color: var(--navy); transform: scale(1.09) translateY(-4px); }
-.placement-logo.selected img { transform: scale(1.08); }
-.placement-logo.selected span { opacity: 1; transform: translateY(0); }
-.placement-logo:hover:not(.selected), .placement-logo:focus-visible:not(.selected) { opacity: .8 !important; background: rgba(255,255,255,.09); transform: scale(.98) !important; }
+.placement-logo:hover, .placement-logo:focus-visible { position: relative; z-index: 2; background: rgba(255,255,255,.14); box-shadow: 0 12px 28px rgba(0,0,0,.2); transform: scale(1.06) translateY(-3px); }
+.placement-logo:hover img, .placement-logo:focus-visible img { transform: scale(1.06); }
+.placement-logo:hover span, .placement-logo:focus-visible span { opacity: 1; transform: translateY(0); }
 
 .alumni-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #d9dfe4; }
 .alumni-list a { display: flex; min-height: 98px; flex-direction: column; justify-content: center; padding: 18px 24px 18px 0; border-bottom: 1px solid #d9dfe4; }

@@ -184,16 +184,6 @@
     const topbar = document.getElementById('topbar');
     window.addEventListener('scroll', () => topbar.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
     document.getElementById('year').textContent = new Date().getFullYear();
-    const logoWall = document.querySelector('.logo-wall');
-    const placementLogos = [...document.querySelectorAll('.placement-logo')];
-    placementLogos.forEach(logo => logo.addEventListener('click', () => {
-      logoWall.classList.add('has-selection');
-      placementLogos.forEach(item => {
-        const selected = item === logo;
-        item.classList.toggle('selected', selected);
-        item.setAttribute('aria-pressed', String(selected));
-      });
-    }));
   </script>
 </body>
 </html>
