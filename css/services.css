@@ -34,12 +34,12 @@
 .also-worked { padding: 28px 0 0; }
 .also-worked p { margin: 0 0 14px; color: rgba(255,255,255,.56); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .client-logo-wall { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.16); border-left: 1px solid rgba(255,255,255,.16); }
-.client-logo-wall > div { display: grid; min-height: 92px; place-items: center; padding: 15px; border-right: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.035); }
+.client-logo-wall > div { display: grid; min-height: 106px; place-items: center; gap: 9px; padding: 15px; border-right: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.035); }
 .client-logo-wall img { max-width: 100%; max-height: 50px; object-fit: contain; filter: brightness(0) invert(1); opacity: .86; }
-.client-logo-wall .wordmark { color: white; font-family: "Manrope", sans-serif; font-size: clamp(18px, 1.7vw, 24px); font-weight: 600; line-height: 1; text-align: center; letter-spacing: 0; }
+.client-logo-wall > div > span { color: white; font-size: 11px; font-weight: 700; letter-spacing: .04em; line-height: 1.2; text-align: center; }
+.client-logo-wall > div > span small { display: block; margin-top: 3px; color: var(--gold); font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .client-logo-wall .external-logo { gap: 9px; }
 .client-logo-wall .external-logo img { width: 42px; height: 42px; filter: none; opacity: 1; }
-.client-logo-wall .external-logo span { color: white; font-size: 11px; font-weight: 700; letter-spacing: .04em; line-height: 1.2; text-align: center; }
 
 .proof-section { display: grid; grid-template-columns: .34fr 1fr; gap: clamp(40px, 7vw, 90px); }
 .proof-section header { padding-top: 8px; }
