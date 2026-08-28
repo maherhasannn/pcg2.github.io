@@ -28,10 +28,10 @@
 .logo-wall { display: grid; grid-template-columns: repeat(7, 1fr); border-top: 1px solid rgba(255,255,255,.14); border-left: 1px solid rgba(255,255,255,.14); }
 .placement-logo { display: grid; aspect-ratio: 1.2 / 1; min-height: 112px; place-content: center; place-items: center; gap: 8px; padding: 12px 8px; border: 0; border-right: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); color: white; background: rgba(255,255,255,.025); cursor: default; opacity: 1; transition: background .25s ease, transform .25s ease, box-shadow .25s ease; }
 .placement-logo img { width: 48px; height: 48px; object-fit: contain; opacity: 1; transition: transform .25s ease; }
-.placement-logo span { max-width: 120px; overflow: hidden; font-size: 10px; font-weight: 700; letter-spacing: .04em; line-height: 1.2; opacity: 0; transform: translateY(4px); transition: opacity .2s ease, transform .2s ease; }
+.placement-logo span { max-width: 120px; overflow: hidden; font-size: 10px; font-weight: 700; letter-spacing: .04em; line-height: 1.2; opacity: 1; transform: translateY(0); }
+.placement-logo--wide img { width: 104px; padding: 7px; border-radius: 4px; background: white; }
 .placement-logo:hover, .placement-logo:focus-visible { position: relative; z-index: 2; background: rgba(255,255,255,.14); box-shadow: 0 12px 28px rgba(0,0,0,.2); transform: scale(1.06) translateY(-3px); }
 .placement-logo:hover img, .placement-logo:focus-visible img { transform: scale(1.06); }
-.placement-logo:hover span, .placement-logo:focus-visible span { opacity: 1; transform: translateY(0); }
 
 .alumni-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #d9dfe4; }
 .alumni-list a { display: flex; min-height: 98px; flex-direction: column; justify-content: center; padding: 18px 24px 18px 0; border-bottom: 1px solid #d9dfe4; }
