@@ -148,3 +148,5 @@ h3 { font-weight: 400 !important; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+.recruitment-note { max-width: 600px; margin: 0 0 24px; padding-left: 16px; border-left: 2px solid var(--gold); color: white; font-size: 15px; line-height: 1.6; }
