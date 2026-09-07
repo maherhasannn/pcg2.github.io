@@ -82,11 +82,4 @@
   .timeline-grid h3 { margin-top: 34px; }
 }
 
-.recruitment-card h2 { margin: 0 0 24px; color: white; font-size: 36px; font-weight: 500; }
-.recruitment-status-list { margin: 0 0 24px; }
-.recruitment-status-list div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.16); }
-.recruitment-status-list dt { color: rgba(255,255,255,.82); }
-.recruitment-status-list dd { margin: 0; color: var(--gold); }
-.cycle-notice p { margin: 0 0 20px; color: rgba(255,255,255,.82); font-size: 17px; line-height: 1.7; }
-.cycle-notice p:last-child { margin-bottom: 0; }
-#recruitment-status, #coffee-chats { scroll-margin-top: 100px; }
+#recruitment-status { scroll-margin-top: 100px; }
