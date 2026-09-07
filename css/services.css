@@ -41,6 +41,9 @@
 .client-logo-wall .external-logo { gap: 9px; }
 .client-logo-wall .external-logo img { width: 42px; height: 42px; filter: none; opacity: 1; }
 
+.client-logo-wall .official-logo img { width: 112px; height: 50px; filter: none; opacity: 1; }
+.client-logo-wall .official-logo--square img { width: 50px; }
+
 .proof-section { display: grid; grid-template-columns: .34fr 1fr; gap: clamp(40px, 7vw, 90px); }
 .proof-section header { padding-top: 8px; }
 .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
