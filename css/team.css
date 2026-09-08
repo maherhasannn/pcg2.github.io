@@ -4,6 +4,7 @@
 .team-hero p:last-child { max-width: 670px; margin: 0; color: rgba(255,255,255,.82); font-size: 18px; }
 
 .team-section { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: clamp(58px, 6vw, 80px) 0; }
+.advisors-section { border-top: 1px solid var(--line); }
 .team-intro { display: grid; grid-template-columns: 1.25fr .75fr; gap: 56px; align-items: end; margin-bottom: 38px; }
 .team-intro h2, .placements-heading h2 { margin: 0; font-family: "Manrope", sans-serif; font-size: clamp(38px, 4.3vw, 58px); font-weight: 300; line-height: 1.06; letter-spacing: -.045em; }
 .team-intro > p { margin: 0; color: var(--muted); }

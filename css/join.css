@@ -4,9 +4,9 @@
 .join-hero-copy > p:not(.eyebrow) { max-width: 650px; margin: 0 0 30px; color: rgba(255,255,255,.82); font-size: 18px; line-height: 1.65; }
 .recruitment-card { padding: 24px; border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius); background: rgba(6,23,43,.64); backdrop-filter: blur(14px); }
 .recruitment-card p { margin: 0 0 18px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.recruitment-card a { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 0; border-top: 1px solid rgba(255,255,255,.16); color: white; font-family: "Manrope", sans-serif; font-size: 24px; line-height: 1.1; }
-.recruitment-card a span { order: 2; color: rgba(255,255,255,.46); font-family: "Manrope", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
-.recruitment-card a:hover { color: var(--gold); }
+.recruitment-card .recruitment-resource { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 0; border-top: 1px solid rgba(255,255,255,.16); color: white; font-family: "Manrope", sans-serif; font-size: 24px; line-height: 1.1; }
+.recruitment-card .recruitment-resource > span { order: 2; color: rgba(255,255,255,.46); font-family: "Manrope", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+
 
 .join-section { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: clamp(58px, 7vw, 86px) 0; }
 .section-heading { display: grid; grid-template-columns: 1.18fr .82fr; gap: clamp(36px, 7vw, 96px); align-items: end; margin-bottom: 38px; }
@@ -83,3 +83,5 @@
 }
 
 #recruitment-status { scroll-margin-top: 100px; }
+
+.guide-link[aria-disabled="true"] { color: var(--muted); border-bottom: 0; }
